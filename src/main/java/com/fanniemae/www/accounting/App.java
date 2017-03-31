@@ -31,7 +31,7 @@ public class App {
 				if (accountDAO.create(name, INIT_DEPOSIT))
 					System.out.println("Account for " + name + " created successfully.\n");
 				else
-					System.out.println("ERROR: Account was not created.");
+					System.out.println("ERROR: Account was not created.\n");
 
 			} else if (option.equalsIgnoreCase(UPDATE_OPTION)) {
 				System.out.println("Enter account #:");
@@ -41,7 +41,7 @@ public class App {
 				if (accountDAO.update(Integer.parseInt(accountID), Double.parseDouble(accountBalance)))
 					System.out.println("Account #" + accountID + " has been updated successfully.\n");
 				else
-					System.out.println("ERROR: Account was not updated.");
+					System.out.println("ERROR: Account was not updated.\n");
 			} else if (option.equalsIgnoreCase("Q")) {
 				isMenu = false;
 				scan.close();
