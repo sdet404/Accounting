@@ -8,7 +8,6 @@ import java.sql.SQLException;
 public class AccountDAO implements IAccountDAO {
 
 	public boolean create(String name, double accountBalance) throws ClassNotFoundException, SQLException {
-
 		String insertQuery = "INSERT INTO SDET404.ACCOUNT VALUES (ACCOUNT_ID_SEQ.NEXTVAL,ACCOUNT_NO_SEQ.NEXTVAL,?,?)";
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -20,7 +19,6 @@ public class AccountDAO implements IAccountDAO {
 			stmt.setString(1, name);
 			stmt.setDouble(2, accountBalance);
 			successCode = stmt.executeUpdate();
-			stmt.close();
 		} finally {
 			if (conn != null)
 				conn.close();
@@ -44,7 +42,6 @@ public class AccountDAO implements IAccountDAO {
 			stmt.setDouble(1, accountBalance);
 			stmt.setInt(2, accountID);
 			successCode = stmt.executeUpdate();
-			stmt.close();
 		} finally {
 			if (conn != null)
 				conn.close();
