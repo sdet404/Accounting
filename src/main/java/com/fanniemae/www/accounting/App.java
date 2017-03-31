@@ -32,7 +32,6 @@ public class App {
 					System.out.println("Account for " + name + " created successfully.\n");
 				else
 					System.out.println("ERROR: Account was not created.\n");
-
 			} else if (option.equalsIgnoreCase(UPDATE_OPTION)) {
 				System.out.println("Enter account #:");
 				String accountID = scan.nextLine();
@@ -46,7 +45,6 @@ public class App {
 				isMenu = false;
 				scan.close();
 			}
-
 		}
 
 		System.out.println("Exited.");
